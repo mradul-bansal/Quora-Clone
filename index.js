@@ -15,7 +15,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static (path.join(__dirname, "public")));
 
 let posts = [
-    {
+    { 
         id:uuidv4(),
         username: "mradulbansal",
         content: "Pari pagal h",
@@ -66,8 +66,14 @@ app.get("/posts", (req, res) => {
             let { id } = req.params;
             let post = posts.find((p) => id === p.id);
             res.render("edit.ejs");
-
+            
         });
+
+        app.delete ("/posts/:id", (req, res) => {
+            let { id } = req.params;
+              posts = posts.filter((p) => id !== p.id);
+              res.redirect("/posts");
+             });
 
 app.listen(port, () => {
       console.log("Server is listning to port 8080");
