@@ -71,26 +71,26 @@ a:hover {
 }
 
 /* Buttons */
-button {
+button, .submit-button, .create-button {
     background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 8px 12px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 14px; /* Adjusted font size to maintain consistency */
 }
 
-button:hover {
+button:hover, .submit-button:hover, .create-button:hover {
     background-color: #c0392b;
 }
 
-button:focus {
+button:focus, .submit-button:focus, .create-button:focus {
     outline: none;
 }
 
 /* Form Container */
-.form-container {
+.form-container, .create-container {
     background-color: #fff;
     border: 1px solid #e3e3e3;
     border-radius: 8px;
@@ -101,7 +101,7 @@ button:focus {
     max-width: 600px;
 }
 
-.form-header {
+.form-header, .create-header {
     background-color: #b92b27;
     color: #fff;
     padding: 10px 15px;
@@ -112,13 +112,13 @@ button:focus {
 }
 
 /* Form Labels */
-.form-label {
+.form-label, .create-label {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 /* Form Input Fields */
-.form-input {
+.form-input, .create-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -127,72 +127,8 @@ button:focus {
     font-size: 14px;
 }
 
-/* Submit Button */
-.submit-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit-button:hover {
-    background-color: #c0392b;
-}
-
-/* Create New Post Page Styles */
-.create-container {
-    background-color: #fff;
-    border: 1px solid #e3e3e3;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.create-header {
-    background-color: #b92b27;
-    color: #fff;
-    padding: 10px 15px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
+/* Specific Adjustments for Create Form */
 .create-form {
     display: flex;
     flex-direction: column;
-}
-
-.create-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.create-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.create-button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.create-button:hover {
-    background-color: #c0392b;
 }
