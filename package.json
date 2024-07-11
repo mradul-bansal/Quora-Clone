@@ -12,6 +12,8 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "nodeman": "^1.1.2"
+    "method-override": "^3.0.0",
+    "nodeman": "^1.1.2",
+    "uuid": "^10.0.0"
   }
 }

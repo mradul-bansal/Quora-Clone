@@ -2,8 +2,12 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
+var { v4: uuidv4 } = require('uuid');
+var methodOverride = require('method-override')
 
 app.use(express.urlencoded({ extended: true}));
+app.use(methodOverride('_method'))
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -12,19 +16,19 @@ app.use(express.static (path.join(__dirname, "public")));
 
 let posts = [
     {
-        id:"1a",
+        id:uuidv4(),
         username: "mradulbansal",
         content: "Pari pagal h",
 
     },
     {
-        id:"2b",
+        id:uuidv4(),
         username: "hiralbansal",
         content: "hunny pagal h",
 
     },
     {
-        id:"3c",
+        id:uuidv4(),
         username: "manishbansal",
         content: "dono pagal h",
 
@@ -39,7 +43,8 @@ app.get("/posts", (req, res) => {
     });
     app.post("/posts", (req, res) => {
        let {username, content} = req.body;
-       posts.push({username, content});
+       let id = uuidv4();
+       posts.push({id,  username, content});
         res.redirect("/posts");
     });
     app.get("/posts/:id",(req, res) =>{
@@ -47,6 +52,22 @@ app.get("/posts", (req, res) => {
         let post = posts.find((p) => id ===p.id);
         res.render("show.ejs", { post });
     });
+
+    app.patch ("/posts/:id", (req, res) => {
+        let { id } = req.params;
+        let newContent = req.body.content;
+        let post = posts.find((p) => id === p.id);
+        post.content = newContent;
+        console.log(post);
+        res.redirect("/posts");
+        });
+
+        app.get ("/posts/:id/edit", (req, res) => {
+            let { id } = req.params;
+            let post = posts.find((p) => id === p.id);
+            res.render("edit.ejs");
+
+        });
 
 app.listen(port, () => {
       console.log("Server is listning to port 8080");
