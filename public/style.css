@@ -1,9 +1,198 @@
- h1 {
-    color:maroon;
- }
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* Header */
+h1, h2 {
+    background-color: #b92b27;
+    color: #fff;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Post Container */
 .post {
-    background-color: blanchedalmond;
-    }
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Username */
 .user {
-    font-style: italic;
-    }
+    color: #b92b27;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Post Content */
+.content {
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: #b92b27;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-header {
+    background-color: #b92b27;
+    color: #fff;
+    padding: 10px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Form Input Fields */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #c0392b;
+}
+
+/* Create New Post Page Styles */
+.create-container {
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.create-header {
+    background-color: #b92b27;
+    color: #fff;
+    padding: 10px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.create-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.create-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-button:hover {
+    background-color: #c0392b;
+}
